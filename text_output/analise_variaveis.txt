@@ -1,0 +1,44 @@
+Análise das Variáveis
+====================
+
+1. Interação entre Total SF e Preço de Venda:
+Média do Preço de Venda para Total SF:
+TotalSF
+334       39300.0
+720       72500.0
+728       60000.0
+827      107500.0
+845       84000.0
+           ...   
+6428     430000.0
+6760     755000.0
+6872     745000.0
+7814     184750.0
+11752    160000.0
+Name: SalePrice, Length: 963, dtype: float64
+
+2. Interação entre Qualidade Geral e Preço de Venda:
+Média do Preço de Venda por Qualidade Geral:
+OverallQual
+1      50150.000000
+2      51770.333333
+3      87473.750000
+4     108420.655172
+5     133523.347607
+6     161603.034759
+7     207716.423197
+8     274735.535714
+9     367513.023256
+10    438588.388889
+Name: SalePrice, dtype: float64
+
+3. Interação entre Número de Garagens e Preço de Venda:
+Média do Preço de Venda por Número de Garagens:
+GarageCars
+0    103317.283951
+1    128116.688347
+2    183851.663835
+3    309636.121547
+4    192655.800000
+Name: SalePrice, dtype: float64
+
