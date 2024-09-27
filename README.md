@@ -8,24 +8,24 @@ Os dados foram obtidos do Kaggle, um dos maiores portais de competições de ci�
 
 ## 1. Pré-processamento de Dados
 
-O primeiro código é responsável pelo pré-processamento dos dados. Ele carrega o conjunto de dados a partir do arquivo train.csv, trata valores ausentes e transforma variáveis categóricas em colunas numéricas usando a técnica de one-hot encoding. Além disso, cria novas variáveis que capturam informações relevantes, como a soma das áreas totais da casa e a quantidade total de banheiros. Este passo é crucial para garantir que o modelo receba dados limpos e estruturados, facilitando a análise subsequente.
+O primeiro código é responsável pelo pré-processamento dos dados. Ele carrega o conjunto de dados a partir do arquivo `train.csv`, trata valores ausentes e transforma variáveis categóricas em colunas numéricas usando a técnica de one-hot encoding. Além disso, cria novas variáveis que capturam informações relevantes, como a soma das áreas totais da casa e a quantidade total de banheiros. Este passo é crucial para garantir que o modelo receba dados limpos e estruturados, facilitando a análise subsequente.
 
 ## 2. Modelagem
 
-Esse código utiliza dados tratados de um arquivo CSV (train_data_cleaned.csv) para realizar as seguintes análises:
+Esse código utiliza dados tratados de um arquivo CSV (`train_data_cleaned.csv`) para realizar as seguintes análises:
 
 - Gera histogramas para visualizar a distribuição das colunas numéricas.
 - Calcula estatísticas descritivas das colunas numéricas.
 - Calcula a matriz de correlação entre as colunas numéricas.
-- Identifica as correlações das variáveis com a variável alvo (SalePrice).
+- Identifica as correlações das variáveis com a variável alvo (`SalePrice`).
 
 ## 3. Treinamento
 
 Esse código realiza a preparação, treinamento e avaliação de um modelo de regressão XGBoost para prever preços de venda de casas. A limpeza dos dados é feita primeiro, adicionando novas features que combinam outras colunas (como o tamanho total do imóvel ou o número total de banheiros). Valores extremos de preço de venda são removidos usando uma técnica chamada Interquartile Range (IQR) para identificar outliers.
 
-As variáveis independentes (as features) são padronizadas usando StandardScaler, garantindo que todas tenham uma média de 0 e um desvio padrão de 1, o que é importante para o desempenho de muitos modelos de machine learning.
+As variáveis independentes (as features) são padronizadas usando `StandardScaler`, garantindo que todas tenham uma média de 0 e um desvio padrão de 1, o que é importante para o desempenho de muitos modelos de machine learning.
 
-O modelo XGBoost é treinado com uma busca em grade (GridSearchCV) para otimizar os hiperparâmetros, como o número de estimadores e a profundidade máxima das árvores. O melhor modelo encontrado é usado para prever os preços de venda no conjunto de teste. As métricas de desempenho como Mean Squared Error (MSE) e R² são calculadas para avaliar a precisão das previsões.
+O modelo XGBoost é treinado com uma busca em grade (`GridSearchCV`) para otimizar os hiperparâmetros, como o número de estimadores e a profundidade máxima das árvores. O melhor modelo encontrado é usado para prever os preços de venda no conjunto de teste. As métricas de desempenho, como `Mean Squared Error (MSE)` e `R²`, são calculadas para avaliar a precisão das previsões.
 
 Além disso, o código gera gráficos para visualizar os resultados:
 
@@ -41,8 +41,8 @@ Ele também gera uma lista de importâncias das features para identificar quais 
 
 Esse código realiza as seguintes análises:
 
-- Calcula a soma das áreas de porão, primeiro e segundo andares para criar a variável TotalSF.
-- Realiza uma análise detalhada das interações entre algumas variáveis e o preço de venda (SalePrice), incluindo TotalSF, OverallQual (Qualidade Geral) e GarageCars (Número de Garagens).
+- Calcula a soma das áreas de porão, primeiro e segundo andares para criar a variável `TotalSF`.
+- Realiza uma análise detalhada das interações entre algumas variáveis e o preço de venda (`SalePrice`), incluindo `TotalSF`, `OverallQual` (Qualidade Geral) e `GarageCars` (Número de Garagens).
 - Gera gráficos para visualizar essas interações:
 
 ![Gráfico de Interação](https://i.imgur.com/JRkjWRx.gif)
