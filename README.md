@@ -53,6 +53,10 @@ Esse código realiza as seguintes análises:
 
 Essas análises ajudam a entender como as variáveis selecionadas influenciam o preço de venda das casas no conjunto de dados.
 
+## 5. Teste do Modelo
+
+O arquivo `test.py` é responsável por executar o modelo treinado em novos dados. Ele carrega o conjunto de dados de teste, aplica o mesmo pré-processamento que foi utilizado no conjunto de treinamento e realiza previsões de preços de venda utilizando o modelo XGBoost otimizado. Isso permite avaliar o desempenho do modelo em dados não vistos e verificar a eficácia das previsões.
+
 ## Conclusão
 
 Juntos, esses códigos formam um fluxo de trabalho robusto para a previsão de preços de venda de casas. Desde o pré-processamento e modelagem até a avaliação e análise exploratória, cada componente desempenha um papel crucial na geração de insights acionáveis e na melhoria da precisão das previsões.
