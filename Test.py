@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score
 from xgboost import XGBRegressor
+import joblib  # Para carregar o modelo salvo
 
 # Aqui estou ignorando os gritos de aviso do Python 
 warnings.filterwarnings('ignore')
@@ -62,6 +63,9 @@ X_train_scaled = scaler.fit_transform(X_train_encoded)
 model = XGBRegressor(n_estimators=1000, learning_rate=0.05)
 model.fit(X_train_scaled, y_train)
 
+# Salvar o modelo
+joblib.dump(model, 'text_output/xgb_model.pkl')
+
 # Calculando o MSE e o R² no conjunto de treino
 y_train_pred = model.predict(X_train_scaled)
 mse = mean_squared_error(y_train, y_train_pred)
@@ -83,6 +87,9 @@ test_data_encoded = test_data_encoded[X_train_encoded.columns]
 
 # Padronizando os dados do conjunto de teste
 X_test_scaled = scaler.transform(test_data_encoded)
+
+# Carregando o modelo salvo
+model = joblib.load('text_output/xgb_model.pkl')
 
 # Fazendo as previsões no conjunto de teste
 y_pred_test = model.predict(X_test_scaled)

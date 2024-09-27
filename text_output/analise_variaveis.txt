@@ -1,8 +1,8 @@
-AnÃ¡lise das VariÃ¡veis
+Análise das Variáveis
 ====================
 
-1. InteraÃ§Ã£o entre Total SF e PreÃ§o de Venda:
-MÃ©dia do PreÃ§o de Venda para Total SF:
+1. Interação entre Total SF e Preço de Venda:
+Média do Preço de Venda para Total SF:
 TotalSF
 334       39300.0
 720       72500.0
@@ -17,8 +17,8 @@ TotalSF
 11752    160000.0
 Name: SalePrice, Length: 963, dtype: float64
 
-2. InteraÃ§Ã£o entre Qualidade Geral e PreÃ§o de Venda:
-MÃ©dia do PreÃ§o de Venda por Qualidade Geral:
+2. Interação entre Qualidade Geral e Preço de Venda:
+Média do Preço de Venda por Qualidade Geral:
 OverallQual
 1      50150.000000
 2      51770.333333
@@ -32,8 +32,8 @@ OverallQual
 10    438588.388889
 Name: SalePrice, dtype: float64
 
-3. InteraÃ§Ã£o entre NÃºmero de Garagens e PreÃ§o de Venda:
-MÃ©dia do PreÃ§o de Venda por NÃºmero de Garagens:
+3. Interação entre Número de Garagens e Preço de Venda:
+Média do Preço de Venda por Número de Garagens:
 GarageCars
 0    103317.283951
 1    128116.688347

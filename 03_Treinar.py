@@ -12,7 +12,7 @@ import seaborn as sns
 warnings.filterwarnings('ignore')
 
 # "I can only show you the door. You're the one that has to walk through it"
-train_file_path = 'train_data_cleaned.csv'
+train_file_path = 'text_output/train_data_cleaned.csv'
 
 # Standardize features by removing the mean and scaling to unit variance. (de acordo com a doc)
 scaler = StandardScaler()
@@ -76,6 +76,9 @@ grid_search.fit(X_train_scaled, y_train)
 # Aqui já é podium com champagne (tá ouvindo a musiquinha né? pan pan pan)
 best_model = grid_search.best_estimator_
 print("Best hyperparameters:", grid_search.best_params_)
+
+# Salvar o modelo treinado
+best_model.save_model('xgboost_model.json')
 
 # E FINALMENTE nossa bola de cristal funcionou...
 y_pred_xgb = best_model.predict(X_test_scaled)

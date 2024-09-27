@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Carregar os dados tratados, como se estivéssemos recebendo o roteiro final de um Block Buster
-train_data_cleaned = pd.read_csv('train_data_cleaned.csv')
+train_data_cleaned = pd.read_csv('text_output/train_data_cleaned.csv')
 
 # Listar as colunas numéricas, como os personagens principais da nossa história
 numerical_columns = train_data_cleaned.select_dtypes(include=[np.number]).columns.tolist()
